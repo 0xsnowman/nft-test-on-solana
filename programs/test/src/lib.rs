@@ -3,7 +3,13 @@ use anchor_lang::prelude::*;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub mod mint_nft(
+pub mod test {
+    use super::*;
+
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        Ok(())
+    }
+    pub fn mint_nft(
         ctx: Context<MintNFT>,
         creator_key: Pubkey,
         uri: String,
@@ -96,6 +102,7 @@ pub mod mint_nft(
         msg!("Master Edition Nft Minted !!!");
         Ok(())
     }
+}
 
 #[derive(Accounts)]
 pub struct Initialize {}
