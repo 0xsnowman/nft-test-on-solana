@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub fn mint_nft(
+pub mod mint_nft(
         ctx: Context<MintNFT>,
         creator_key: Pubkey,
         uri: String,
